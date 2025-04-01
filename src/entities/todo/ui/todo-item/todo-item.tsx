@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
+import { Button } from '@/shared/ui/button';
+import { Checkbox } from '@/shared/ui/checkbox';
 
 interface TodoItemProps {
   id: string;

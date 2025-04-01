@@ -1,38 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-export interface Todo {
-  id: string;
-  text: string;
-  completed: boolean;
-}
-
+import { Todo } from './types';
 interface TodosState {
   list: Todo[];
 }
 
 const initialState: TodosState = {
-  list: [
-    {
-      id: '1',
-      text: 'Learn TypeScript',
-      completed: false,
-    },
-    {
-      id: '2',
-      text: 'Build a Redux app',
-      completed: false,
-    },
-    {
-      id: '3',
-      text: 'Deploy to production',
-      completed: false,
-    },
-    {
-      id: '4',
-      text: 'Write tests',
-      completed: false,
-    },
-  ],
+  list: [],
 };
 
 export const todoSlice = createSlice({

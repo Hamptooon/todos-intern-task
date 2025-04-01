@@ -1,9 +1,9 @@
 import { TodoItem } from '@/entities/todo/ui/todo-item';
-import { Todo } from '@/entities/todo/model/types';
+import { Todo, TodoFilter } from '@/entities/todo/model/types';
 
 interface TodoListProps {
   todos: Todo[];
-  currentFilter: 'all' | 'active' | 'completed';
+  currentFilter: TodoFilter;
   onToggleTodo: (id: string) => void;
   onDeleteTodo: (id: string) => void;
 }
@@ -16,7 +16,7 @@ export const TodoList = ({ todos, currentFilter, onToggleTodo, onDeleteTodo }: T
   });
 
   return (
-    <div className='border rounded-lg overflow-hidden'>
+    <>
       {filteredTodos.length === 0 ? (
         <div className='p-4 text-center text-gray-500'>Нет задач</div>
       ) : (
@@ -24,6 +24,6 @@ export const TodoList = ({ todos, currentFilter, onToggleTodo, onDeleteTodo }: T
           <TodoItem key={todo.id} {...todo} onToggle={onToggleTodo} onDelete={onDeleteTodo} />
         ))
       )}
-    </div>
+    </>
   );
 };
