@@ -1,54 +1,94 @@
-# React + TypeScript + Vite
+# 🚀 Todo App Intern — Управление задачами тестовое задание для стажировки
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **[Демо (Github Pages)](https://hamptooon.github.io/todos-intern-task/)**
 
-Currently, two official plugins are available:
+https://hamptooon.github.io/todos-intern-task/
+<img src="public/app-preview.png" alt="Скриншот приложения" width="600"/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Особенности
 
-## Expanding the ESLint configuration
+### 🧩 Функционал
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Добавление задач** с валидацией (1-65 символов)
+- **3 фильтра просмотра**: Все/Активные/Завершенные
+- **Динамическая статистика**: Число активных задач
+- **Массовая очистка** завершенных задач
+- **Темная/светлая тема** с сохранением в localStorage
+- **Адаптивный дизайн** для всех устройств
+- **Кастомный скроллбар** с анимациями
+- **Интуитивный UI** с мгновенной обратной связью
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 🛠 Технологический стек
+
+| Технология          | Назначение                  |
+| ------------------- | --------------------------- |
+| **React 18**        | Базовый фреймворк           |
+| **TypeScript**      | Статическая типизация       |
+| **Redux Toolkit**   | Управление состоянием       |
+| **Tailwind CSS**    | Стилизация + кастомные темы |
+| **shadcn/ui**       | Доступные UI-компоненты     |
+| **Zod**             | Валидация форм              |
+| **React Hook Form** | Управление формами          |
+| **Vite**            | Сборка + Dev Server         |
+
+## 🏗 Архитектура (FSD)
+
+```
+src/
+├── app/            # Инициализация приложения провайдеры
+├── pages/          # Страницы приложения
+├── widgets/        # Композиция фич/сущностей
+├── features/       # Бизнес-фичи (добавление, фильтры и т.д)
+├── entities/       # Бизнес-сущности (задача)
+├── shared/         # Переиспользуемые ресурсы
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Запуск проекта
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Требования
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- Node.js ≥18.0
+- npm ≥9.0
+
+### Установка
+
+```bash
+git clone https://github.com/hamptooon/todos-intern-task.git
+cd todos-intern-task
+npm install
 ```
+
+### Команды
+
+```bash
+# Запуск dev-сервера
+npm run start
+
+# Сборка для production
+npm run build
+
+# Деплой на GitHub Pages
+npm run deploy
+
+# Запуск тестов (Jest + Testing Library)
+npm run test
+```
+
+## 🎨 Дизайн-система
+
+- **Цвета**: Кастомные OKLCH-палитры
+- **Анимации**: Нативные переходы Tailwind
+- **Типографика**: Системные шрифты (оптимизация загрузки)
+- **Темы**: Глубокие кастомные CSS-переменные
+
+## 🤔 Почему именно этот стек?
+
+1. **TypeScript** — предотвращение ошибок на этапе разработки
+2. **Redux Toolkit** — предсказуемое управление состоянием
+3. **Tailwind + shadcn** — скорость разработки без потери кастомизации
+4. **Zod** — типобезопасная валидация с человекочитаемыми ошибками
+5. **FSD** — масштабируемость и четкое разделение ответственности
+
+## 📜 Лицензия
+
+MIT License — [Подробнее](LICENSE)
