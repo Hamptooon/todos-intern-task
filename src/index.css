@@ -52,6 +52,10 @@
 
 body {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .dark {
@@ -133,4 +137,22 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer components {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(var(--primary) / 0.2 transparent);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-primary/20 hover:bg-primary/30;
+  }
+}
+body {
+  @apply min-h-screen p-4 sm:p-6;
 }

@@ -5,7 +5,10 @@ interface TodoClearCompletedButtonProps {
 }
 export const TodoClearCompletedButton = ({ onClearCompleted }: TodoClearCompletedButtonProps) => {
   return (
-    <Button onClick={onClearCompleted}>
+    <Button
+      className='max-sm:self-end max-md:self-baseline max-sm:w-full'
+      onClick={onClearCompleted}
+    >
       Clear Completed <FaRegTrashCan />
     </Button>
   );

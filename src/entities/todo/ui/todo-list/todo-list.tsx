@@ -16,14 +16,16 @@ export const TodoList = ({ todos, currentFilter, onToggleTodo, onDeleteTodo }: T
   });
 
   return (
-    <>
+    <div className='h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent'>
       {filteredTodos.length === 0 ? (
         <div className='p-4 text-center text-gray-500'>Нет задач</div>
       ) : (
-        filteredTodos.map((todo) => (
-          <TodoItem key={todo.id} {...todo} onToggle={onToggleTodo} onDelete={onDeleteTodo} />
-        ))
+        <div className='divide-y'>
+          {filteredTodos.map((todo) => (
+            <TodoItem key={todo.id} {...todo} onToggle={onToggleTodo} onDelete={onDeleteTodo} />
+          ))}
+        </div>
       )}
-    </>
+    </div>
   );
 };

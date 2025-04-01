@@ -25,7 +25,11 @@ export const TodoAddForm = ({ onAddTodo }: TodoAddFormProps) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='flex gap-2 w-full' role='form'>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className='flex gap-2 w-full max-sm:flex-col'
+        role='form'
+      >
         <FormField
           control={form.control}
           name='text'
