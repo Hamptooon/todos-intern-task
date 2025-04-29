@@ -1,5 +1,4 @@
-# 🚀 Todo App Intern — Управление задачами тестовое задание для стажировки
-
+# 🚀 Todo App Intern — Мини приложение для управление задачами 
 ## **[Демо (Github Pages)](https://hamptooon.github.io/todos-intern-task/)**
 
 https://hamptooon.github.io/todos-intern-task/
